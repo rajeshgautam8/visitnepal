@@ -10,7 +10,7 @@ html,body {
 }
 /* css code for top section*/
 .top {
-	padding: 12px;
+	padding: 16px;
 	background-color: #328432;
 	display: flex;
 	justify-content: space-between;
@@ -24,11 +24,17 @@ html,body {
 .top h4 {
 	padding: 0 64px;
 	color: white;
+	font-size: 18px;
+	font-weight: normal;
 }
 
 .icon a {
-	padding-right: 16px;
+	padding-right: 20px;
 	text-decoration: none;
+}
+
+.icon img {
+	width: 20px;
 }
 
 .icon a:hover {
@@ -43,7 +49,7 @@ html,body {
 	justify-content: space-around;
 	position: sticky;
 	top: 0;
-	z-index: 200;
+	z-index: 1;
 	background-color: white;
 }
 
@@ -115,7 +121,7 @@ li a {
 .text .button {
 	padding: 16px 32px;
 	color: white;
-	background-color: #0f0;
+	background-color: #3f3;
 	border-radius : 20px;
 }
 
@@ -168,10 +174,7 @@ li a {
 .list > p{
 	width: 250px;
 }
-
-.dt-list img:hover {
-	zoom: 105%;
-}
+/*transition to be added required*/
 /*code for package part done*/
 
 /*code for destination part*/
