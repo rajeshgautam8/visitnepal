@@ -14,6 +14,7 @@ html,body {
 	background-color: #328432;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .icon {
@@ -28,25 +29,17 @@ html,body {
 	font-weight: normal;
 }
 
-.icon a {
-	padding-right: 20px;
-	text-decoration: none;
-}
-
 .icon img {
 	width: 20px;
 }
 
-.icon a:hover {
-	color: white;
-}
 /* css code for top section done*/
 
 /*Code for navbar section*/
 .nav-section {
-	padding: 8px;
+	padding: 8px 64px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	position: sticky;
 	top: 0;
 	z-index: 1;
@@ -57,14 +50,10 @@ html,body {
 	display: flex;
 }
 
-.nav li {
-	list-style: none;
-	padding: 16px;
-}
-
-li a {
+a {
 	text-decoration: none;
 	color: black;
+	padding: 16px;
 	font-size: 20px;
 	font-weight: 600;
 }
@@ -72,6 +61,12 @@ li a {
 .nav a:hover {
 	color: #0f0;
 }
+
+.hidden-icon {
+	display: none;
+}
+
+
 /*Code for navbar section*/
 
 /*code for image slider part*/
@@ -249,14 +244,12 @@ li a {
 }
 
 .blogs-list {
-	width: 90%;
-	margin: auto;
 	display: flex;
 	justify-content: space-around;
 }
 
 .bg-list {
-	width: 30%;
+	margin-right: 16px;
 	border: 2px solid grey;
 	box-shadow: 10px 10px 10px #aaaaaa;
 	border-radius: 30px;
@@ -279,14 +272,13 @@ li a {
 	text-align: justify;
 	padding: 0px 8px 8px 8px;
 }
-.btn  {
-	font-size: 20px;
-	color: blue;
-	font-weight: 600;
-}
+
 
 .btn a {
 	text-decoration: none;
+	color: blue;
+	font-size: 20px;
+	font-weight: 600;
 }
 
 .btn a:hover {
@@ -314,3 +306,199 @@ li a {
 	border-radius: 25px;
 }
 /*code for blogs part done*/
+
+/* If the screen size is 600px wide or less, hide the element */
+@media  screen and (max-width: 600px) {
+	/*nav part*/
+	.nav,.top{
+		display: none;
+	}
+	.nav-section img {
+		padding-right: 20%;
+	}
+	.nav-section {
+		justify-content: flex-start;
+	}
+	.hidden-icon {
+		display: block;
+	}
+
+	.packages {
+		padding: 32px;
+	}
+
+	.packages h3 {
+		padding: 8px;
+		font-size: 26px;
+		font-family: Arial;
+	}
+
+	.packages p {
+		padding: 8px;
+		font-size: 16px;
+		font-family: Arial;
+	}
+
+	.package-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 32px 0 64px 0;
+	}
+
+	.list {
+		padding: 16px ;
+		text-align: center;
+	}
+
+	.list img{
+		width: 250px;
+		height: 200px;
+	}
+
+	.list p {
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.packages a {
+		text-decoration: none;
+		padding: 8px;
+		background-color: #0f0;
+		color: white;
+		font-weight: normal;
+		font-size: 16px;
+		border-radius : 20px;
+	}
+
+	.destinations {
+		padding: 32px; 
+		text-align: center;
+	}
+
+	.destinations a {
+		text-decoration: none;
+		padding: 16px;
+		background-color: #0f0;
+		color: white;
+		font-size: 16px;
+		border-radius : 20px;
+
+	}
+
+	.destinations h3 {
+		font-size: 26px;
+		padding: 8px;
+	}
+
+	.destinations > p {
+		font-size: 16px;
+		padding: 8px;
+	}
+
+	.destinations-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-bottom: 64px;
+	}
+
+	.dt-list {
+		padding: 16px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.dt-list img {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		padding: 8px;
+		border: 2px solid green;
+	}
+
+	.dt-list > p {
+		font-size: 16px;
+		padding-top: 8px;
+		font-weight: bold;
+	}
+
+	
+	.blogs {
+		padding: 16px;
+		margin-bottom: 32px;
+		color: brown;
+	}
+
+	.blogs h3 {
+		font-size: 26px;
+		padding: 8px;
+	}
+
+	.blogs > p {
+		font-size: 16px;
+		padding: 8px;
+		opacity: 0.8;
+		padding-bottom: 16px;
+	}
+
+	.blogs-list {
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+		margin: auto;
+	}
+
+	.bg-list {
+		margin-bottom: 16px;
+		border: 2px solid grey;
+		box-shadow: 4px 4px 4px #aaaaaa;
+		border-radius: 25px;
+		justify-content: center;
+	}
+
+	.bg-list > h4 {
+		padding: 4px;
+		font-size: 28px;
+		color: green
+	}
+
+	.bg-list p {
+		font-size: 20px;
+		color: grey;
+		padding-bottom: 16px;
+	}
+
+	.blog-description {
+		text-align: justify;
+		padding: 0px 8px;
+	}
+
+	.btn {
+		padding: 8px;
+	}
+	.btn a {
+		text-decoration: none;
+		color: blue;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	.btn-blogs {
+		display: flex;
+		justify-content: center;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	.btn-blogs > a{
+		text-decoration: none;
+		padding: 12px;
+		background-color: rgba(0,255,0,1);
+		color: white;
+		font-size: 16px;
+		border-radius: 15px;
+	}	
+
+}
