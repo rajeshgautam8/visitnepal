@@ -9,6 +9,31 @@ html,body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 /* css code for top section*/
+
+p {
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 28px;
+	padding: 8px;
+}
+
+a {	
+	text-decoration: none;
+	color: black;
+	padding: 16px;
+	font-size: 20px;
+	font-weight: 600;
+	background-color:#328432;
+	color: white;
+	border-radius : 25px;
+}
+
+a:hover {
+	background-color:  #0f0;
+}
+
 .top {
 	padding: 16px;
 	background-color: #328432;
@@ -22,7 +47,7 @@ html,body {
 	padding-right: 64px;
 }
 
-.top h4 {
+.top > h4 {
 	padding: 0 64px;
 	color: white;
 	font-size: 18px;
@@ -49,17 +74,13 @@ html,body {
 .nav {
 	display: flex;
 }
-
-a {
-	text-decoration: none;
+.nav a {
 	color: black;
-	padding: 16px;
-	font-size: 20px;
-	font-weight: 600;
+	background-color: white;
 }
 
 .nav a:hover {
-	color: #0f0;
+	color:#0f0;
 }
 
 .hidden-icon {
@@ -81,14 +102,14 @@ a {
 	top: 60%;
 	padding: 8px;
 	border-radius: 0 3px 3px 0;
-	color: blue;
+	color: #00f;
+	background-color: white;
 	font-weight: 600;
 	font-size: 20px;
 }
 
 .next {
 	right: 0;
-	margin-right: 8px;
 }
 
 .prev:hover , .next:hover {
@@ -100,8 +121,7 @@ a {
 	top: 50%;
 	text-align: center;
 	left: 30%;
-	background-color: rgba(0,0,0,0);
-	color: rgba(255,255,255,0.8);
+	color: rgba(255,255,255,0.9);
 }
 
 .text h3{
@@ -116,12 +136,8 @@ a {
 .text .button {
 	padding: 16px 32px;
 	color: white;
-	background-color: #3f3;
+	background-color: #328432;
 	border-radius : 20px;
-}
-
-.text a {
-	text-decoration: none;
 }
 
 /*code for image slider part done*/
@@ -134,25 +150,8 @@ a {
 	text-align: center;
 }
 
-.packages h3 {
-	padding: 8px;
-	font-size: 32px;
-	font-family: Arial;
-}
-
 .packages > p {
-	padding: 8px;
-	font-size: 20px;
-	opacity: 0.8;
-}
-
-.packages a {
-	text-decoration: none;
-	padding: 16px;
-	background-color: #0f0;
-	color: white;
-	font-size: 20px;
-	border-radius : 25px;
+	opacity: 0.9;
 }
 
 .package-list {
@@ -168,6 +167,7 @@ a {
 
 .list > p{
 	width: 250px;
+	font-weight: bold;
 }
 /*transition to be added required*/
 /*code for package part done*/
@@ -178,23 +178,7 @@ a {
 	text-align: center;
 }
 
-.destinations a {
-	text-decoration: none;
-	padding: 16px 32px;
-	background-color: #0f0;
-	color: white;
-	font-size: 20px;
-	border-radius : 40px;
-
-}
-
-.destinations h3 {
-	font-size: 32px;
-	padding: 8px;
-}
-
 .destinations > p {
-	font-size: 20px;
 	padding: 8px;
 }
 
@@ -214,11 +198,7 @@ a {
 	height: 150px;
 	border-radius: 50%;
 	padding: 8px;
-	border: 2px solid green;
-}
-
-.dt-list > p {
-	font-size: 20px;
+	border: 2px solid #328432;
 }
 
 /*code for destination part done*/
@@ -227,17 +207,11 @@ a {
 .blogs {
 	padding: 32px;
 	margin-bottom: 32px;
-	color: brown;
+	color: #328432;
 	text-align: center;
 }
 
-.blogs h3 {
-	font-size: 32px;
-	padding: 8px;
-}
-
 .blogs > p {
-	font-size: 20px;
 	padding: 8px;
 	opacity: 0.8;
 	padding-bottom: 16px;
@@ -256,14 +230,19 @@ a {
 	text-align: center;
 }
 
+.btn a {
+	color: #328432;
+	background-color: white;
+	border-radius: 0px;
+	padding: 0px;
+}
+
 .bg-list > h4 {
 	padding: 4px;
-	font-size: 28px;
-	color: green
+	color: #328432;
 }
 
 .bg-list p {
-	font-size: 20px;
 	color: grey;
 	padding-bottom: 16px;
 }
@@ -273,32 +252,11 @@ a {
 	padding: 0px 8px 8px 8px;
 }
 
-
-.btn a {
-	text-decoration: none;
-	color: blue;
-	font-size: 20px;
-	font-weight: 600;
-}
-
-.btn a:hover {
-	color: green;
-}
-
 .btn-blogs {
 	display: flex;
 	justify-content: center;
 	margin-top: 16px;
 	margin-bottom: 16px;
-}
-
-.btn-blogs > a{
-	text-decoration: none;
-	padding: 16px 16px;
-	background-color: rgba(0,255,0,1);
-	color: white;
-	font-size: 20px;
-	border-radius: 25px;
 }
 
 .bg-list:hover {
@@ -313,14 +271,26 @@ a {
 	.nav,.top{
 		display: none;
 	}
+
 	.nav-section img {
 		padding-right: 20%;
 	}
+
 	.nav-section {
 		justify-content: flex-start;
 	}
+
 	.hidden-icon {
 		display: block;
+	}
+
+	.text {
+		position: absolute;
+		top: 50%;
+		text-align: center;
+		left: 20%;
+		background-color: rgb(0,0,0);
+		color: rgba(255,255,255,0.8);
 	}
 
 	.packages {
@@ -362,25 +332,17 @@ a {
 	}
 
 	.packages a {
-		text-decoration: none;
 		padding: 8px;
-		background-color: #0f0;
-		color: white;
-		font-weight: normal;
 		font-size: 16px;
 		border-radius : 20px;
 	}
 
 	.destinations {
 		padding: 32px; 
-		text-align: center;
 	}
 
 	.destinations a {
-		text-decoration: none;
 		padding: 16px;
-		background-color: #0f0;
-		color: white;
 		font-size: 16px;
 		border-radius : 20px;
 
@@ -415,7 +377,7 @@ a {
 		height: 200px;
 		border-radius: 50%;
 		padding: 8px;
-		border: 2px solid green;
+		border: 2px solid #328432;
 	}
 
 	.dt-list > p {
@@ -424,11 +386,10 @@ a {
 		font-weight: bold;
 	}
 
-	
 	.blogs {
 		padding: 16px;
 		margin-bottom: 32px;
-		color: brown;
+		color: #328432;
 	}
 
 	.blogs h3 {
@@ -458,14 +419,17 @@ a {
 		justify-content: center;
 	}
 
+	.btn > a {
+		background-color: white;
+		color: black;
+	}
+
 	.bg-list > h4 {
-		padding: 4px;
-		font-size: 28px;
-		color: green
+		font-size: 24px;
+		color: #328432;
 	}
 
 	.bg-list p {
-		font-size: 20px;
 		color: grey;
 		padding-bottom: 16px;
 	}
@@ -475,16 +439,6 @@ a {
 		padding: 0px 8px;
 	}
 
-	.btn {
-		padding: 8px;
-	}
-	.btn a {
-		text-decoration: none;
-		color: blue;
-		font-size: 16px;
-		font-weight: 600;
-	}
-
 	.btn-blogs {
 		display: flex;
 		justify-content: center;
@@ -492,13 +446,8 @@ a {
 		margin-bottom: 16px;
 	}
 
-	.btn-blogs > a{
-		text-decoration: none;
-		padding: 12px;
-		background-color: rgba(0,255,0,1);
-		color: white;
-		font-size: 16px;
-		border-radius: 15px;
-	}	
+}
 
+@media screen and (max-width: 600px) {
+	
 }
