@@ -11,27 +11,12 @@ html,body {
 /* css code for top section*/
 
 p {
-	font-size: 20px;
+	font-size: 18px;
 }
 
 h3 {
 	font-size: 28px;
 	padding: 8px;
-}
-
-a {	
-	text-decoration: none;
-	color: black;
-	padding: 16px;
-	font-size: 20px;
-	font-weight: 600;
-	background-color:#328432;
-	color: white;
-	border-radius : 25px;
-}
-
-a:hover {
-	background-color:  #0f0;
 }
 
 .top {
@@ -45,6 +30,10 @@ a:hover {
 .icon {
 	display: flex;
 	padding-right: 64px;
+}
+
+.icon > a {
+	padding: 8px;
 }
 
 .top > h4 {
@@ -71,12 +60,22 @@ a:hover {
 	background-color: white;
 }
 
+.nav-section a {
+	background-color: white;
+	color: black;
+}
+
 .nav {
 	display: flex;
 }
+
 .nav a {
+	text-decoration: none;
 	color: black;
 	background-color: white;
+	padding: 16px;
+	font-size: 20px;
+	font-weight: 600;
 }
 
 .nav a:hover {
@@ -134,19 +133,102 @@ a:hover {
 }
 
 .text .button {
+	text-decoration: none;
 	padding: 16px 32px;
+	font-size: 16px;
+	font-weight: lighter;
 	color: white;
 	background-color: #328432;
-	border-radius : 20px;
+	border-radius : 25px;
+}
+
+.text a:hover {
+	background-color: #0f0;
 }
 
 /*code for image slider part done*/
+
+/*form part*/
+.booking {
+	padding: 0 64px;
+	padding-top: 16px;
+	margin-top: -50px;
+	margin-bottom: -10px;
+}
+
+.booking > a {
+	text-decoration: none;
+	padding: 8px;
+	font-size: 20px;
+	color: white;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.active {
+	background-color: #0f0;
+}
+
+.entire-form {
+	background-color: #6dc234;
+	padding: 0 64px;
+}
+
+.entire-form p {
+	padding-top: 16px;
+	margin-top: 16px;
+	padding-bottom: 24px;
+	color: white;
+	font-size: 22px;
+}
+
+form {
+	display: flex;
+	justify-content: space-around;
+	padding-bottom: 48px;
+	margin-left: -16px; 
+}
+
+form label{
+	color: white;
+	font-size: 20px;
+	font-weight: lighter;
+}
+
+form input {
+	padding: 8px;
+	height: 24px;
+}
+
+.button {
+	margin-top: 20px;
+	width: 120px;
+	height: 50px;
+	padding: 16px;
+	border-radius: 10px;
+}
+
+select {
+	width: 190px;
+	height: 44px;
+	padding: 0 8px;
+}
+
+.veichle-form {
+	display: none;
+}
+
+.flight-form {
+	display: none;
+}
+
+/*form part */
 
 /*code for package part*/
 .packages {
 	width: 80%;
 	margin: auto;
-	padding: 48px 64px 32px 48px;
+	padding: 32px 64px 32px 48px;
 	text-align: center;
 }
 
@@ -154,10 +236,27 @@ a:hover {
 	opacity: 0.9;
 }
 
+.packages > a {
+	text-decoration: none;
+	color: white;
+	background-color: #328432;
+	padding: 16px;
+	font-size: 20px;
+	font-weight: 600;
+	border-radius: 25px;
+}
+
+.packages a:hover {
+	background-color: #0f0;
+}
+
 .package-list {
 	display: flex;
-	justify-content: space-between;
-	padding: 32px 0 64px 0;
+	padding: 0px 0 48px 0;
+}
+
+.list {
+	padding: 16px 16px;
 }
 
 .list img{
@@ -169,6 +268,7 @@ a:hover {
 	width: 250px;
 	font-weight: bold;
 }
+
 /*transition to be added required*/
 /*code for package part done*/
 
@@ -182,15 +282,31 @@ a:hover {
 	padding: 8px;
 }
 
+.destinations > a {
+	text-decoration: none;
+	color: white;
+	background-color: #328432;
+	padding: 16px;
+	font-size: 20px;
+	font-weight: 600;
+	border-radius: 25px;
+}
+
+.destinations > a:hover {
+	background-color: #0f0;
+}
+
 .destinations-list {
 	display: flex;
-	justify-content: space-around;
+	padding: 0 64px;
+	justify-content: center;
 	padding-bottom: 64px;
 }
 
 .dt-list {
 	width: 150px;
 	text-align: center;
+	padding: 4px 16px 0 16px;
 }
 
 .dt-list img {
@@ -205,16 +321,16 @@ a:hover {
 
 /* code for blogs part*/
 .blogs {
-	padding: 32px;
-	margin-bottom: 32px;
 	color: #328432;
 	text-align: center;
+	padding: 32px;
 }
 
 .blogs > p {
 	padding: 8px;
 	opacity: 0.8;
 	padding-bottom: 16px;
+
 }
 
 .blogs-list {
@@ -223,40 +339,64 @@ a:hover {
 }
 
 .bg-list {
-	margin-right: 16px;
+	margin-right: 24px;
 	border: 2px solid grey;
 	box-shadow: 10px 10px 10px #aaaaaa;
 	border-radius: 30px;
 	text-align: center;
 }
 
-.btn a {
+.btn > a {
 	color: #328432;
+	text-decoration: none;
 	background-color: white;
+	font-size: 20px;
+	font-weight: 600;
 	border-radius: 0px;
-	padding: 0px;
+	padding-bottom:  0px;
+}
+
+.btn {
+	margin-bottom: 8px;
+}
+
+.btn a:hover {
+	color: #0f0;
 }
 
 .bg-list > h4 {
-	padding: 4px;
+	padding-top: 8px;
 	color: #328432;
+	font-size: 22px;
 }
 
-.bg-list p {
+.bg-list > p {
 	color: grey;
-	padding-bottom: 16px;
+	padding-top: 8px;
 }
 
 .blog-description {
 	text-align: justify;
-	padding: 0px 8px 8px 8px;
+	padding: 16px;
 }
 
 .btn-blogs {
-	display: flex;
-	justify-content: center;
-	margin-top: 16px;
-	margin-bottom: 16px;
+	text-align: center;
+	padding-bottom: 32px;
+}
+
+.btn-blogs > a{
+	text-decoration: none;
+	color: white;
+	background-color: #328432;
+	padding: 16px;
+	font-size: 20px;
+	font-weight: 600;
+	border-radius: 25px;
+}
+
+.btn-blogs a:hover {
+	background-color: #0f0;
 }
 
 .bg-list:hover {
@@ -266,35 +406,33 @@ a:hover {
 /*code for blogs part done*/
 
 /* If the screen size is 600px wide or less, hide the element */
-@media  screen and (max-width: 600px) {
-	/*nav part*/
+/* @media  screen and (max-width: 599px) {
+	
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
 	.nav,.top{
 		display: none;
 	}
 
-	.nav-section img {
-		padding-right: 20%;
-	}
-
 	.nav-section {
-		justify-content: flex-start;
+		display: none;
+	}
+	.nav-section > img {
+		width: 80px;
+		height: 40px;
+		padding: 4px 0px 4px 8px;
 	}
 
 	.hidden-icon {
-		display: block;
+		display: none;
 	}
 
-	.text {
-		position: absolute;
-		top: 50%;
-		text-align: center;
-		left: 20%;
-		background-color: rgb(0,0,0);
-		color: rgba(255,255,255,0.8);
-	}
-
-	.packages {
-		padding: 32px;
+	.slideshow-container {
+		display: none;
 	}
 
 	.packages h3 {
@@ -387,13 +525,17 @@ a:hover {
 	}
 
 	.blogs {
+		display: none;
+	}
+
+	.blogs {
 		padding: 16px;
 		margin-bottom: 32px;
 		color: #328432;
 	}
 
 	.blogs h3 {
-		font-size: 26px;
+		font-size: 24px;
 		padding: 8px;
 	}
 
@@ -407,16 +549,11 @@ a:hover {
 	.blogs-list {
 		display: flex;
 		flex-direction: column;
-		width: 80%;
-		margin: auto;
 	}
 
 	.bg-list {
-		margin-bottom: 16px;
 		border: 2px solid grey;
-		box-shadow: 4px 4px 4px #aaaaaa;
-		border-radius: 25px;
-		justify-content: center;
+		margin-bottom: 20px;
 	}
 
 	.btn > a {
@@ -446,8 +583,5 @@ a:hover {
 		margin-bottom: 16px;
 	}
 
-}
+} */
 
-@media screen and (max-width: 600px) {
-	
-}

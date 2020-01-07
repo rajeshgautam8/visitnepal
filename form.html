@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html form</title>
+
+	<style type="text/css">
+
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.booking {
+			padding: 0 64px;
+			padding-top: 16px;
+			margin-bottom: -15px;
+		}
+
+		.booking > a {
+			text-decoration: none;
+			padding: 8px;
+			font-size: 20px;
+			margin-right: 2px;
+			border-top-left-radius: 8px;
+			border-top-right-radius: 8px;
+		}
+
+		.active {
+			background-color: green;
+			color: white;
+		}
+		
+		.entire-form {
+			background-color: #0f0;
+			padding: 0 64px;
+		}
+
+		.entire-form p {
+			padding-top: 16px;
+			padding-bottom: 24px;
+			color: white;
+			font-size: 22px;
+		}
+
+		form {
+			display: flex;
+			justify-content: space-around;
+			padding-bottom: 48px;
+		}
+
+		form label{
+			color: white;
+			font-size: 20px;
+			font-weight: lighter;
+		}
+
+		form input {
+			padding: 8px;
+			height: 24px;
+		}
+
+		.button {
+			margin-top: 20px;
+			width: 120px;
+			height: 50px;
+			padding: 16px;
+			border-radius: 10px;
+		}
+
+		select {
+			width: 190px;
+			height: 50px;
+			padding: 16px;
+		}
+
+		.veichle-form {
+			display: none;
+		}
+
+		.flight-form {
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<div class="booking">
+		<a id="holiday-btn" onclick="showHoliday()"  class="active" >Holiday</a>
+		<a id="veichle-btn" onclick="showVeichle()">Vehicle</a>
+		<a id="flight-btn" onclick="showFlight()">Flight</a>
+	</div>
+	<div class="entire-form">
+		<div class="holiday-form" id="holiday">
+			<p>
+				Planning for holiday? Leave an enquiry.
+			</p>
+			<form method="post" name="form1" onsubmit="return validateForm()">
+				<div>
+					<label>Destination</label><br>
+					<input type="text" name="destination" placeholder="Desired destination">
+				</div>
+
+				<div>
+					<label>Date</label><br>
+					<input type="date" name = "user-date" >
+				</div>
+				
+				<div>
+					<label>Number of Person</label><br>
+					<input type="number" name="person" placeholder="0" min="0">
+				</div>
+				
+				<div>
+					<label>Budget</label><br/>
+					<input type="number" name="budget" min="0">
+				</div>
+				
+				<div>
+					<label>Email</label><br>
+					<input type="text" name="email" placeholder="Enter your Email">
+				</div>
+				
+				<input type="submit" value="ENQUIRE" class="button">
+			</form>
+		</div>
+
+		<div class="veichle-form" id="veichle">
+			<p>
+				Need veichle for holiday? Leave an enquiry.
+			</p>
+			<form method="post">
+				<div>
+					<label>From</label><br>
+					<input type="text" name="from" placeholder="From ">	
+				</div>
+
+				<div>
+					<label>To</label><br>
+					<input type="text" name="to" placeholder="To " >	
+				</div>
+				
+				<div>
+					<label>Date</label><br>
+					<input type="date">	
+				</div>
+				
+				<div>
+					<label>Veichle Type</label><br>
+					<select >
+						<option value="jeep" selected="">Jeep</option>
+						<option value="micro-bus">Micro bus</option>
+						<option value="car">Car</option>
+						<option value="bike">Bus</option>
+					</select>	
+				</div>
+				
+				<div>
+					<label>Email</label><br>
+					<input type="text" name="email" placeholder="Enter your Email">	
+				</div>
+				
+				<input type="submit" value="ENQUIRE" class="button">
+			</form>
+		</div> 
+
+		<div class="flight-form" id="flight">
+			<p>
+				Need to book a flight? Leave an enquiry.
+			</p>
+			<form method="post">
+				<div>
+					<label>Departure</label><br>
+					<input type="text" name="departure" placeholder="Departure ">	
+				</div>
+
+				<div>
+					<label>Arrival</label><br>
+					<input type="text" name="arrival" placeholder="Arrival " >	
+				</div>
+				
+				<div>
+					<label>Date</label><br>
+					<input type="date">	
+				</div>
+
+				<div>
+					<label>Number of Person</label><br>
+					<input type="number" name="person" placeholder="0" min="0">
+				</div>
+				
+				<div>
+					<label>Email</label><br>
+					<input type="text" name="email" placeholder="Enter your Email">	
+				</div>
+				
+				<input type="submit" value="ENQUIRE" class="button">
+			</form>
+		</div>
+	</div>
+
+	<script>
+	
+		function showHoliday(){
+			document.getElementById('veichle').style.display = 'none';
+			document.getElementById('flight').style.display = 'none';
+			document.getElementById('holiday').style.display = 'block';
+
+			document.getElementById('holiday-btn').className = 'active';
+			document.getElementById("veichle-btn").classList.remove("active");
+			document.getElementById("flight-btn").classList.remove("active");		
+		}
+
+		function showVeichle(){
+			document.getElementById('veichle').style.display = 'block';
+			document.getElementById('flight').style.display = 'none';
+			document.getElementById('holiday').style.display = 'none';
+
+			document.getElementById('veichle-btn').className = 'active';
+			document.getElementById("flight-btn").classList.remove("active");
+			document.getElementById("holiday-btn").classList.remove("active");	
+		}
+
+		function showFlight(){
+			document.getElementById('veichle').style.display = 'none';
+			document.getElementById('flight').style.display = 'block';
+			document.getElementById('holiday').style.display = 'none';
+
+			document.getElementById('flight-btn').className = 'active';
+			document.getElementById("holiday-btn").classList.remove("active");
+			document.getElementById("veichle-btn").classList.remove("active");
+		}
+	
+
+	function validateForm(){
+		var destination = document.form1.destination.value;
+		var person = document.form1.person.value;
+		if (destination == null||destination =="") {
+			alert('Please enter the destination');
+		}else if (person <= 0) {
+			alert("Please select number of person");
+		}
+
+
+
+
+	}
+	</script>
+</body>
+</html>
