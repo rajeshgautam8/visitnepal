@@ -12,8 +12,8 @@
 		<div class="icon">
 			<a href="facebook.com"><i class="fab fa-facebook"></i></a>
 			<a href="facebook.com"><i class="fab fa-instagram"></i></a>
-			<a href="facebook.com"><img src="images/facebook.png"></a>
-			<a href="facebook.com"><img src="images/instagram.png"></a>
+			<a href="facebook.com"><i class="fab fa-facebook"></i></a>
+			<a href="facebook.com"><i class="fab fa-instagram"></i></a>
 		</div>
 	</div>
 
@@ -67,6 +67,7 @@
 		<a id="veichle-btn" onclick="showVeichle()">VEICHLE</a>
 		<a id="flight-btn" onclick="showFlight()">FLIGHT</a>
 	</div>
+
 	<div class="entire-form">
 		<div class="holiday-form" id="holiday">
 			<p class="from-p">
@@ -182,20 +183,27 @@
 		<div class="package-list">
 			<div class="list">
 				<img src="images/patan.jpg">
-				<p>Best of patan</p>
+				<div class="overlay">
+					<p class="pkg">Best of patan</p><br><br><br><br>
+					<span class="details"><a href="#details">View Details</a></span>
+				</div>
+				
 			</div>
 
 			<div class="list">
 				<img src="images/bhaktapur.jpg">
-				<p>Ancient civilization</p>
+				<p class="pkg">Ancient civilization</p>
+				<span class="details"><a href="#details">View Details</a></span>
 			</div>
 			<div class="list">
 				<img src="images/soyambu.jpg">
-				<p>World Heritage Site</p>
+				<p class="pkg">World Heritage Site</p>
+				<span class="details"><a href="#details">View Details</a></span>
 			</div>
 			<div class="list">
 				<img src="images/pashupati.jpg">
-				<p>Pashupatinath holy place</p>
+				<p class="pkg">Pashupatinath holy place</p>
+				<span class="details"><a href="#details">View Details</a></span>
 			</div>
 		</div>
 		<a href="#packages">View all packages</a>
@@ -206,36 +214,50 @@
 		<p>Premium destinations on offer</p>
 		<div class="destinations-list">
 			<div class="dt-list">
-				<img src="images/patan.jpg">
-				<p>Patan</p>
+				<a href="#patan" id="dest">
+					<img src="images/patan.jpg">
+					<p class="dst">Patan</p>
+				</a>	
 			</div>
 
 			<div class="dt-list">
-				<img src="images/bhaktapur.jpg">
-				<p>Bhaktapur</p>
+				<a href="#bhaktapur" id="dest">
+					<img src="images/bhaktapur.jpg">
+					<p class="dst">Bhaktapur</p>
+				</a>
 			</div>
 
 			<div class="dt-list">
-				<img src="images/chitwan.jpg">
-				<p>Chitwan</p>
+				<a href="#chitwan" id="dest">
+					<img src="images/chitwan.jpg">
+					<p class="dst">Chitwan</p>
+				</a>
+				
 			</div>
 
 			<div class="dt-list">
-				<img src="images/lumbini.jpg">
-				<p>lumbini</p>
+				<a href="#lumbini" id="dest">
+					<img src="images/lumbini.jpg">
+					<p class="dst">Lumbini</p>
+				</a>
+				
 			</div>
 
 			<div class="dt-list">
-				<img src="images/soyambu.jpg">
-				<p>Soyambhu</p>
+				<a href="#soyambu" id="dest">
+					<img src="images/soyambu.jpg">
+					<p class="dst">Soyambhu</p>
+				</a>	
 			</div>
 
 			<div class="dt-list">
-				<img src="images/pashupati.jpg">
-				<p>Pashupati</p>
+				<a href="#pashupati" id="dest" >
+					<img  src="images/pashupati.jpg">
+					<p class="dst">Pashupati</p>	
+				</a>
 			</div>
 		</div>
-	<a href="#destinations">View all destinations</a>
+		<a href="#destinations">View all destinations</a>
 	</div>
 
 	<div class="blogs">
@@ -334,7 +356,6 @@
 			document.getElementById("holiday-btn").classList.remove("active");
 			document.getElementById("veichle-btn").classList.remove("active");
 		}
-
 	</script>
 
 </body>
